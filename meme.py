@@ -1,11 +1,20 @@
+"""File responsible for generating a meme via CLI."""
+
 import os
 import random
+import argparse
 
-# @TODO Import your Ingestor and MemeEngine classes
+from .QuoteEngine import Ingestor, QuoteModel
+from .MemeEngine import MemeEngine
 
 
 def generate_meme(path=None, body=None, author=None):
-    """ Generate a meme given an path and a quote """
+    """Generate a meme given an path and a quote.
+
+    Reference:
+    Lesson 5, Concept 4: Exercise - Argparser
+    https://classroom.udacity.com/nanodegrees/nd303/parts/bdd52131-b22e-4c57-b3f2-a03951c9d514/modules/5fe343a0-2926-4953-81bc-485ee835e1c6/lessons/93decac5-5e75-4573-b28e-ad1218ec04d3/concepts/aec5a0a6-45ac-4138-a6f5-f83ae270869e
+    """
     img = None
     quote = None
 
@@ -40,9 +49,21 @@ def generate_meme(path=None, body=None, author=None):
 
 
 if __name__ == "__main__":
-    # @TODO Use ArgumentParser to parse the following CLI arguments
-    # path - path to an image file
-    # body - quote body to add to the image
-    # author - quote author to add to the image
-    args = None
+    """Use ArgumentParser to parse CLI arguments.
+
+    param path: path to an image file
+    param body: quote body to add to the image
+    param author: quote author to add to the image
+    Return: A generated meme
+    """
+    parser = argparse.ArgumentParse(description="Meme Generator")
+    parser.add_argument('--path', type=str, default=None,
+                        help="The origin of the quote.")
+    parser.add_argument('--body', type=str, default=None,
+                        help="The words of our canine friends")
+    parser.add_argument('--author', type=str, default=None,
+                        help="The canine friend  who bestows wisdow")
+
+    args = parser.parse_args()
+
     print(generate_meme(args.path, args.body, args.author))
