@@ -9,8 +9,8 @@ import os
 import random
 import argparse
 
-from .QuoteEngine import Ingestor, QuoteModel
-from .MemeEngine import MemeEngine
+from QuoteEngine import Ingestor, QuoteModel
+from MemeEngine import MemeEngine
 
 
 def generate_meme(path=None, body=None, author=None):
