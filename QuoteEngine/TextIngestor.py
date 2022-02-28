@@ -8,7 +8,7 @@ https://classroom.udacity.com/nanodegrees/nd303/parts/bdd52131-b22e-4c57-b3f2-a0
 """
 from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
-
+from typing import List
 
 class TXTIngestor(IngestorInterface):
     """Create an Concrete Class Object for parsing txt file pathways.
