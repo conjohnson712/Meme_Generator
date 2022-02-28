@@ -34,7 +34,7 @@ class MemeEngine():
             # Resize
             if width is not None:
                 ratio = width/float(image.size[0])
-                height = int(ratio*float(img.size[1]))
+                height = int(ratio*float(image.size[1]))
                 image = image.resize((width, height), Image.NEAREST)
 
             if body is not None:
