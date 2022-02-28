@@ -12,8 +12,8 @@ import os
 import requests
 from flask import Flask, render_template, abort, request
 
-from .QuoteEngine import Ingestor, QuoteModel
-from .MemeEngine import MemeEngine
+from QuoteEngine import Ingestor, QuoteModel
+from MemeEngine import MemeEngine
 
 app = Flask(__name__)
 
