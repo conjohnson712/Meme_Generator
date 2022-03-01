@@ -61,7 +61,7 @@ if __name__ == "__main__":
     param author: quote author to add to the image
     Return: A generated meme
     """
-    parser = argparse.ArgumentParse(description="Meme Generator")
+    parser = argparse.ArgumentParser(description="Meme Generator")
     parser.add_argument('--path', type=str, default=None,
                         help="The written origin of the quote.")
     parser.add_argument('--body', type=str, default=None,

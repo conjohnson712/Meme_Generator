@@ -41,9 +41,9 @@ class MemeEngine():
                 full_quote = f'{body}\n - {author}'
                 draw = ImageDraw.Draw(image)
                 font = ImageFont.truetype(
-                            '.Meme_Generator/fonts/ToThePointRegular.ttf',
+                            './MemeEngine/fonts/ToThePointRegular.ttf',
                             size=22)
-                body = draw.body((11, 33), full_quote, font=font,
+                body = draw.text((11, 33), full_quote, font=font,
                                  fill='white')
 
             # Create a Temporary Random Name to add to finished meme
