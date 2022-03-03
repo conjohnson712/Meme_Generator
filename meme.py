@@ -67,7 +67,7 @@ if __name__ == "__main__":
     parser.add_argument('--body', type=str, default=None,
                         help="The wisdom of our canine friends")
     parser.add_argument('--author', type=str, default=None,
-                        help="The canine friend who bestowed the wisdow")
+                        help="The canine friend who bestowed the wisdom")
 
     args = parser.parse_args()
 

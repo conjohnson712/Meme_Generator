@@ -31,13 +31,23 @@ Or the project can be downloaded as a ZIP from that same repo if you prefer.
 
 Please create a virtual environment and install the necessary dependencies from the requirements.txt file using the following code: 
 ```
-python3.5 -m venv venv2
+python3 -m venv venv2
 source venv2/bin/activate
 pip install -r requirements.txt
 ```
 
 With these steps completed, you are ready to make some memes!
 
+To generate a meme and have the filepath of the image returned to you, simply open a terminal and input: 
+```
+python3 meme.py
+```
+
+To use an app interface to generate random memes, simply input: 
+```
+python3 app.py
+```
+- This will return a http link that you can paste into your favorite browser. Be sure to leave the terminal open while you make memes in the browser. You may need to zoom out to see the full picture, depending on your device. All files will be saved to a tmp folder. 
 
 ## Modules Overview
 
