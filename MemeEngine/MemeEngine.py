@@ -3,9 +3,12 @@
 References:
 Lesson 4, Concept 6: Exercise - Pillow:
 https://classroom.udacity.com/nanodegrees/nd303/parts/bdd52131-b22e-4c57-b3f2-a03951c9d514/modules/5fe343a0-2926-4953-81bc-485ee835e1c6/lessons/cac8a587-58ea-44d2-927f-0c9badb7a8e9/concepts/5d29ecf9-42d4-4e16-9326-6027682b24a0
+Knowledge Solution for Corrupted Font:
+https://knowledge.udacity.com/questions/542475
 """
 from PIL import Image, ImageDraw, ImageFont
 from random import randint
+import os
 
 
 class MemeEngine():
@@ -41,10 +44,11 @@ class MemeEngine():
                 full_quote = f'{body}\n - {author}'
                 draw = ImageDraw.Draw(image)
                 font = ImageFont.truetype(
-                            './MemeEngine/fonts/ToThePointRegular.ttf',
+                            "./MemeEngine/font/LilitaOne-Regular.ttf",
                             size=22)
-                body = draw.text((11, 33), full_quote, font=font,
-                                 fill='white')
+                body = draw.text((33, 55), full_quote, font=font,
+                                 fill='white', stroke_width=2,
+                                 stroke_fill='black')
 
             # Create a Temporary Random Name to add to finished meme
             trn = f'/{randint(0,1000)}.jpg'
