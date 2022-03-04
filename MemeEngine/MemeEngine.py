@@ -11,6 +11,7 @@ from random import randint
 import os
 import textwrap
 
+
 class MemeEngine():
     """Creates memes by placing quotes onto images."""
 
@@ -54,9 +55,9 @@ class MemeEngine():
                 x = randint(0, 100)
                 y = randint(0, 200)
                 body = draw.multiline_text((x, y), full_quote, font=font,
-                                 fill='white', stroke_width=2,
-                                 stroke_fill='black')
-                
+                                           fill='white', stroke_width=2,
+                                           stroke_fill='black')
+
             # Create a Temporary Random Name to add to finished meme
             trn = f'/{randint(0,1000)}.jpg'
             finished_meme = f'{self.meme_folder}/{trn}'
