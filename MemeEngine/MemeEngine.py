@@ -42,10 +42,11 @@ class MemeEngine():
 
             if body is not None:
                 full_quote = f'{body}\n - {author}'
-                full_quote = textwrap.wrap(full_quote, 15)
-                
-                draw = ImageDraw.Draw(image)
+                import textwrap  # Mentor Suggestion
+                wrapper = textwrap.TextWrapper(width=40)
+                full_quote = wrapper.fill(text=full_quote)
 
+                draw = ImageDraw.Draw(image)
                 font = ImageFont.truetype(
                             "./MemeEngine/font/LilitaOne-Regular.ttf",
                             size=22)
