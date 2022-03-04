@@ -73,17 +73,15 @@ def meme_post():
     param quote_author: Request the author of the quote.
     """
     image_url = request.form.get('image_url')
-    
+
     quote_body = request.form.get('body')
     quote_author = request.form.get('author')
 
     # Mentor suggestion
     try:
         r = requests.get(image_url)
-    except requests.exceptions.ConnectionError as e:  
+    except requests.exceptions.ConnectionError as e:
         return "Invalid URL. Please Try Again :)"
-    
-
     tmp_meme = f'./tmp/{random.randint(0, 100000)}.jpg'
     open(tmp_meme, 'wb').write(r.content)
     path = meme.make_meme(tmp_meme, quote_body, quote_author)
