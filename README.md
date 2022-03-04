@@ -13,6 +13,7 @@ This project was a chance to showcase the skills presented to us in the **'Large
 
 
 ## Overview
+![Example](https://github.com/conjohnson712/Meme_Generator/blob/main/static/70.jpg?raw=true)
 At the highest level of functionality, this project must complete the following requirements (taken directly from project instructions): 
 - Interact with a variety of complex filetypes. This emulates the kind of data you'll encounter in a data engineering role. 
 - Load quotes from a variety of filetypes (PDF, Word Docs, CSVs, Text files). 
